@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Annual Effective Rate calculator"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/Tasa_Nominal_Anual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Tasa_Nominal_Anual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Nominal annual rate in %"
+        android:inputType="number|numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/Opciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Titulo"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/Texto_Capitalizacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Capitalization"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/Capitalizaciones"
+        app:layout_constraintEnd_toStartOf="@+id/Opciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tasa_Nominal_Anual" />
+
+    <RadioGroup
+        android:id="@+id/Opciones"
+        android:layout_width="157dp"
+        android:layout_height="200dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/Capitalizaciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Texto_Capitalizacion"
+        app:layout_constraintTop_toBottomOf="@+id/Tasa_Nominal_Anual"
+        app:layout_constraintVertical_bias="0.515">
+
+        <RadioButton
+            android:id="@+id/Opcion_Diaria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daily"
+            android:textSize="20sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/Opcion_Semanal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Weekly"
+            android:textSize="20sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/Opcion_Mensual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Monthly"
+            android:textSize="20sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/Opcion_Trimestral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quarterly"
+            android:textSize="20sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/Capitalizaciones"
+        android:layout_width="243dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Capitalizations per year"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/Calcular"
+        app:layout_constraintEnd_toStartOf="@+id/Otra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Opciones"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/Calcular"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Calculate"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Capitalizaciones" />
+
+    <Button
+        android:id="@+id/Otra"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="46sp"
+        android:gravity="center"
+        android:text="Other"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/Calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Capitalizaciones"
+        app:layout_constraintTop_toBottomOf="@+id/Opciones"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
