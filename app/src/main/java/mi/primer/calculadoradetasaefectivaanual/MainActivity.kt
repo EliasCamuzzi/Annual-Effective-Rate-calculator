@@ -1,8 +1,11 @@
 package mi.primer.calculadoradetasaefectivaanual
 
+import android.content.Intent
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
@@ -230,6 +233,25 @@ class MainActivity : AppCompatActivity() {
             }
 
             System.gc()
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.var_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+
+            R.id.Ir_Al_Web_View -> {
+                val IrALaActivityWebView = Intent(this, Web_Page::class.java)
+                startActivity(IrALaActivityWebView)
+
+                true
+            }
+
+            else -> false
         }
     }
 }
