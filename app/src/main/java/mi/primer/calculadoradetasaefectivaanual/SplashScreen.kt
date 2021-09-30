@@ -11,8 +11,11 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-        Timer("SettingUp", false).schedule(1000) {
+        supportActionBar!!.hide()
+
+        Timer("SettingUp", false).schedule(700) {
             IrALaSiguienteActivity()
+            finish()
         }
 
     }
