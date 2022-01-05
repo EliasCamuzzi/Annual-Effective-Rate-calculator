@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "919257045471",
+    "project_id": "mydatabase-5f9d8",
+    "storage_bucket": "mydatabase-5f9d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919257045471:android:2610114a9ab80a93a04c6a",
+        "android_client_info": {
+          "package_name": "mi.primer.calculadoradetasaefectivaanual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "919257045471-65e73p0eg372u2gvck9cpm9mu63alvtl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBput54j3J8B817vQteb0Pf0N8CMQNioAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "919257045471-65e73p0eg372u2gvck9cpm9mu63alvtl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
